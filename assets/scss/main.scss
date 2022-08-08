@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+    ::selection {
+        background: var(--green);
+        color: var(--white);
+    }
+}
+
+:root {
+    // === Colors ===
+    --green: #265952;
+    --yellow: #ddb140;
+    --cream: #f6f0e4;
+    --blue: #c0cece;
+    --white: #ffffff;
+
+    --bg-body: #f4f4f4;
+    --txt-black: #010101;
+    --txt-gray: #868f91;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: 0;
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn-primary {
+    background-color: var(--yellow);
+    color: var(--white);
+    font-size: .75rem;
+    font-weight: 500;
+    padding: .65rem 3rem .65rem 1rem;
+    cursor: pointer;
+    position: relative;
+    transition: .3s linear;
+
+    .btn-icon {
+        background-color: var(--white);
+        color: var(--txt-black);
+        font-size: 1.2rem;
+        padding: .45rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: .2rem;
+    }
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--txt-black);
+
+        .btn-icon {
+            background-color: var(--yellow);
+        }
+    }
+}
+
+@import "./header";
+@import "./home";
+@import "./about";
+@import "./projects";
+@import "./process";
+@import "./shop";
+@import "./info";
+@import "./reviews";
+@import "./subscribe";
+@import "./footer";
+
+@import "./breakpoints";

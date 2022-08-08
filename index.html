@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <title>Interio</title>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Swiper Slider -->
+    <link rel="stylesheet" href="./assets/scss/swiper-bundle.min.css">
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="./assets/scss/main.css">
+</head>
+
+<body>
+    <!-- section header -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav__logo"><i class='bx bxs-package icon-logo'></i> Interio<span>.</span></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Inicio</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Sobre Nosotros</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Proyectos</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#shop" class="nav__link">Tienda</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contacto</a>
+                    </li>
+                </ul>
+                <button class="btn__close" id="btn-close"><i class='bx bx-x'></i></button>
+            </div>
+
+            <div class="nav__options">
+                <select class="select__language">
+                    <option>ES</option>
+                    <option>EN</option>
+                </select>
+
+                <button class="btn__shop"><i class='bx bx-shopping-bag'></i></button>
+
+                <button class="btn__menu" id="btn-menu"><i class='bx bx-dots-vertical-rounded'></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- section home -->
+        <section class="home" id="home">
+            <div class="home__content">
+                <div class="txt__content">
+                    <h1 class="home__title"><span>Interio</span> El arte moderno de la simplicidad.</h1>
+                    <p class="home__description">Somos tendencia a los miles de detalles que se necesitan para crear una
+                        casa personalizada adaptada a su estilo de vida.</p>
+                    <button class="btn-primary">Explora más <i class='bx bx-right-arrow-alt btn-icon'></i></button>
+                </div>
+
+                <div class="img__content">
+                    <img src="./assets/img/home1.jpg" class="home__img">
+                </div>
+
+                <ul class="thumbnails">
+                    <li data-text="INTERIOR 1" data-number="1" class="thumb__item active"><img
+                            src="./assets/img/home1.jpg" class="thumb__img active"
+                            onclick="changeHome('./assets/img/home1.jpg')"></li>
+                    <li data-text="INTERIOR 2" data-number="2" class="thumb__item"><img src="./assets/img/home2.jpg"
+                            class="thumb__img" onclick="changeHome('./assets/img/home2.jpg')"></li>
+                    <li data-text="INTERIOR 3" data-number="3" class="thumb__item"><img src="./assets/img/home3.jpg"
+                            class="thumb__img" onclick="changeHome('./assets/img/home3.jpg')"></li>
+                </ul>
+
+                <div class="video-content">
+                    <video id="home-video" muted src="./assets/img/video-home.mp4"></video>
+                    <button class="btn-video" id="btn-play"><i class='bx bx-play' id="icon-btnvideo"></i></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section about -->
+        <section class="about" id="about">
+            <div class="about__content">
+                <div class="about__img">
+                    <img class="img-about1" src="./assets/img/about1.jpg" alt="">
+                    <img class="img-about2" src="./assets/img/about2.jpg" alt="">
+
+                    <div class="about__review">
+                        <p class="description__review">"Fue realmente un trabajo de proceso muy fluido con el equipo de
+                            Interio. Los técnicos tienen mucha experiencia y pudieron comprender mis requisitos a
+                            fondo."</p>
+
+                        <div class="review__info">
+                            <div class="review__author">
+                                <img class="author__img" src="./assets/img/testimony1.jpg" alt="">
+                                <span class="author__name">Lisa B.</span>
+                            </div>
+                            <div class="punctuation">
+                                <div class="stars">
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                    <i class='bx bxs-star'></i>
+                                </div>
+                                <span>48 reseñas en Yelp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about__txt">
+                    <h2 class="about__title">Galardonado Estudio <br> De <span>Diseño De Interiores</span></h2>
+                    <p class="about__description">Somos una firma de diseño de interiores residenciales ubicada en
+                        Monterrey, Mexico. Nuestro estudio boutique ofrece más de 20 años de experiencia en renovaciones
+                        personalizadas, acabados de casas nuevas y diseño de muebles. Podemos ayudarlo con todos los
+                        aspectos de su proyecto, desde los conceptos de diseño y la creación del equipo de construcción,
+                        hasta la obtención de muebles y arte. Al mismo tiempo que atiende a los miles de detalles que se
+                        necesitan para crear un hogar personalizado adaptado a su estilo de vida.</p>
+
+                    <img class="about__firma" src="./assets/img/firma.png" alt="Firma de Jennie Blackpink">
+                    <span class="about__author">Jennie Blackpink, CEO</span>
+
+                    <button class="btn-primary">Leer más <i class='bx bx-right-arrow-alt btn-icon'></i></button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section projects -->
+        <section class="projects" id="projects">
+            <div class="projects__content">
+                <div class="projects__txt">
+                    <h2 class="projects__title">Más de <span>600 proyectos</span><br> en todo el mundo</h2>
+                    <p class="projects__description">Interio es una empresa establecida de arquitectura de alta gama y
+                        diseño de interiores de lujo con sede en Monterrey, Mexico. Ofrecemos un servicio completo y
+                        personalizado que cubre todos y cada uno de los aspectos de su proyecto.</p>
+                    <button class="btn-primary">Explora más <i class='bx bx-right-arrow-alt btn-icon'></i></button>
+                </div>
+
+                <div class="swiper projects__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/project1.jpg" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__title">Comercial</p>
+                                <span class="slide__quantity">180 proyectos</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/project2.jpg" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__title">Residencial</p>
+                                <span class="slide__quantity">250 proyectos</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/project3.jpg" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__title">Cocina</p>
+                                <span class="slide__quantity">140 proyectos</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/project4.jpg" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__title">Baños</p>
+                                <span class="slide__quantity">120 proyectos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section process -->
+        <section class="process">
+            <div class="process__content">
+                <div class="process__img">
+                    <img class="img__process" src="./assets/img/process.jpg" alt="">
+
+                    <div class="process__icons">
+                        <div class="icons__item">
+                            <i class='bx bx-bulb icon__main'></i>
+                            <i class='bx bxs-circle circle-icon'></i>
+                            <p class="icons__name">Concepto</p>
+                        </div>
+
+                        <div class="icons__item">
+                            <i class='bx bx-grid-alt icon__main'></i>
+                            <i class='bx bxs-circle circle-icon'></i>
+                            <p class="icons__name">Plan</p>
+                        </div>
+
+                        <div class="icons__item">
+                            <i class='bx bx-pencil icon__main'></i>
+                            <i class='bx bxs-circle circle-icon'></i>
+                            <p class="icons__name">Diseño</p>
+                        </div>
+
+                        <div class="icons__item">
+                            <i class='bx bx-wrench icon__main'></i>
+                            <i class='bx bxs-circle circle-icon'></i>
+                            <p class="icons__name">Construir</p>
+                        </div>
+
+                        <div class="icons__item">
+                            <i class='bx bx-rocket icon__main'></i>
+                            <i class='bx bxs-check-circle circle-icon'></i>
+                            <p class="icons__name">Lanzar</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="process__data">
+                    <h2 class="process__title"><span>Nuestro proceso de trabajo</span><br> hace realidad tu sueño</h2>
+
+                    <div class="process__item">
+                        <span class="process__number">1</span>
+                        <h3 class="process__name">Perfección en Cada Centímetro</h3>
+                        <p class="process__description">Somos una firma de diseño de interiores residenciales ubicada en
+                            Monterrey, Mexico...</p>
+                    </div>
+
+                    <div class="process__item">
+                        <span class="process__number">2</span>
+                        <h3 class="process__name">Idea y Diseño Simples</h3>
+                        <p class="process__description">Somos una firma de diseño de interiores residenciales ubicada en
+                            Monterrey, Mexico...</p>
+                    </div>
+
+                    <div class="process__item">
+                        <span class="process__number">3</span>
+                        <h3 class="process__name">Soporte Cómodo</h3>
+                        <p class="process__description">Somos una firma de diseño de interiores residenciales ubicada en
+                            Monterrey, Mexico...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section shop -->
+        <section class="shop" id="shop">
+            <div class="shop__content">
+                <div class="shop__txt">
+                    <h2 class="shop__title">Comprar <span>Productos</span><br> de Tendencia</h2>
+
+                    <div class="swiper-pagination-unique"></div>
+
+                    <div class="buttons__navegation">
+                        <div class="swiper-button-prev-unique">
+                            <i class='bx bx-left-arrow-alt'></i>
+                        </div>
+                        <div class="swiper-button-next-unique">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper shop__carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/product1.png" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__name">Lámpara de Mesa</p>
+                                <span class="slide__price">$1,299.00</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/product2.png" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__name">Sofá Individual</p>
+                                <span class="slide__price">$3,659.00</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide lamp">
+                            <img class="slide__img" src="./assets/img/product3.png" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__name">Lámpara Colgante</p>
+                                <span class="slide__price">$1,799.00</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/product4.png" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__name">Silla de Madera</p>
+                                <span class="slide__price">$2,489.00</span>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img class="slide__img" src="./assets/img/product5.png" alt="">
+
+                            <div class="slide__info">
+                                <p class="slide__name">Reloj de Pared</p>
+                                <span class="slide__price">$1,989.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section info -->
+        <section class="info">
+            <div class="info__content">
+                <div class="info__txt">
+                    <h2 class="info__title">Echa un vistazo a cómo funciona <br><span>Interio Design Studio</span></h2>
+
+                    <p class="description part-1">El multipremiado equipo de diseño de interiores de Interio aborda cada
+                        proyecto como un viaje de diseño único, considerando cuidadosamente las preferencias de estilo
+                        de vida del cliente y sus necesidades personales.</p>
+                    <p class="description part-2">Nuestros servicios de diseño de alta gama están diseñados para
+                        satisfacer las necesidades de cada cliente, entregando diseños singulares y distintivos que
+                        reflejan nuestros valores de diseño reflexivo.</p>
+
+                    <button class="btn__hire"><i class='bx bxs-right-arrow btn-icon'></i> Obtenga más información para
+                        contratarnos</button>
+                </div>
+
+                <div class="info__illustration">
+                    <img class="info__img" src="./assets/img/how_works.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section reviews -->
+        <section class="reviews">
+            <div class="reviews__content">
+                <div class="reviews__txt">
+                    <i class='bx bxs-quote-alt-left icon-quotes'></i>
+                    <h2 class="reviews__title">Lo que dicen <br><span>Nuestros Clientes</span></h2>
+
+                    <div class="buttons__navegation">
+                        <div class="swiper-button-prev-reviews">
+                            <i class='bx bx-left-arrow-alt'></i>
+                        </div>
+                        <div class="swiper-button-next-reviews">
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper reviews__slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <p class="info__review">"El estudio de diseño Interio se ha convertido en el socio
+                                fundamental de mi empresa de desarrollo de interiores comercial y residencial debido a
+                                ese enfoque único y talentoso."</p>
+
+                            <div class="author">
+                                <img class="img__author" src="./assets/img/testimony2.jpg" alt="">
+
+                                <div class="data">
+                                    <h5 class="name__author">Amelia Kristian</h5>
+                                    <span class="profession__author">Ceo en I-creative studio</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <p class="info__review">"Sus diseños son brillantes, rentables y hermosos. Su equipo es
+                                increíblemente atento y receptivo y hacen todo lo posible para garantizar que completar
+                                una construcción sea lo más simple posible."</p>
+
+                            <div class="author">
+                                <img class="img__author" src="./assets/img/testimony3.jpg" alt="">
+
+                                <div class="data">
+                                    <h5 class="name__author">Robin Greenchik</h5>
+                                    <span class="profession__author">Gerente de construcción, VPIX</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <p class="info__review">"Fue realmente un trabajo de proceso muy fluido con el equipo de
+                                Interio. Los técnicos tienen mucha experiencia y pudieron comprender mis requisitos a
+                                fondo."</p>
+
+                            <div class="author">
+                                <img class="img__author" src="./assets/img/testimony4.jpg" alt="">
+
+                                <div class="data">
+                                    <h5 class="name__author">Sara Polon</h5>
+                                    <span class="profession__author">Administrativa, Inmobiliaria del hogar</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- section subscribe -->
+        <section class="subscribe">
+            <div class="subscribe__content">
+                <img class="img__subscribe" src="./assets/img/subscribe.jpg" alt="">
+
+                <div class="data__subscribe">
+                    <div class="txt__subscribe">
+                        <div class="indicator__map"></div>
+
+                        <span class="data__direction"><i class='bx bxs-map'></i> NL CP 5678, Monterrey, 9876-5432,
+                            MX</span>
+                        <h2 class="data__title">Comencemos algo <br> grande juntos</h2>
+
+                        <div class="form__subscribe">
+                            <input class="input__email" type="email" placeholder="Introduce tu correo electrónico...">
+                            <button class="btn-primary" type="submit">Comenzar</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__section">
+                <h5 class="title__section">Compañía</h5>
+
+                <div class="social">
+                    <a class="link__social" href="https://www.facebook.com/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a class="link__social" href="https://mx.linkedin.com/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a class="link__social" href="https://twitter.com/" target="_blank"><i class='bx bxl-twitter'></i></a>
+                </div>
+
+                <div class="data__footer">
+                    <span>Interio Studio. Ltd</span>
+                    <span>NL CP 5678, 9876-5432</span>
+                    <span>Monterrey, México</span>
+                </div>
+            </div>
+
+            <div class="footer__section" id="contact">
+                <h5 class="title__section">Contactos</h5>
+
+                <div class="data__footer">
+                    <a class="link__contact" href="mailto:info@interiostudio.io">info@interiostudio.io</a>
+                    <a class="link__contact" href="tel:+81234708121">(+81) 234 708 121</a>
+                    <a class="link__contact" href="tel:+81234708122">(+81) 234 708 122</a>
+                    <a class="link__contact" href="tel:+81234708123">(+81) 234 708 123</a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h5 class="title__section">Sobre nosotros</h5>
+
+                <div class="data__footer">
+                    <a class="link__about" href="#">Referencias</a>
+                    <a class="link__about" href="#">Servicios</a>
+                    <a class="link__about" href="#">Contacto</a>
+                    <a class="link__about" href="#">Equipo</a>
+                </div>
+            </div>
+
+            <div class="footer__section">
+                <h5 class="title__section">Catálogos</h5>
+
+                <div class="data__footer">
+                    <a class="link__catalogue" href="#">Hogar</a>
+                    <a class="link__catalogue" href="#">Oficina</a>
+                    <a class="link__catalogue" href="#">Cocina</a>
+                    <a class="link__catalogue" href="#">Industrias</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section__copyright">
+            <div class="section__logo">
+                <a class="link__logo" href="#"><i class='bx bxs-package icon-logo'></i> Interio<span>.</span></a>
+                <span class="info__dev">Desarrollado por: <a class="link__dev" href="https://github.com/JessArthuro" target="_blank">JS Arthuro</a></span>
+            </div>
+
+            <div class="section__terms">
+                <a href="#">POLÍTICA</a>
+                <a href="#">COOKIES</a>
+                <a href="#">TÉRMINOS Y CONDICIONES</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- JS Files -->
+    <script src="./assets/js/scrollreveal.min.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

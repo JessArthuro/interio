@@ -1,0 +1,130 @@
+.about {
+    padding: 5rem 0;
+
+    .about__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .about__img {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1.2rem;
+            padding-right: 2rem;
+            height: 500px;
+            position: relative;
+
+            .img-about1 {
+                height: 500px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .img-about2 {
+                height: 325px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .about__review {
+                position: absolute;
+                bottom: -1rem;
+                right: 1rem;
+                background-color: var(--white);
+                max-width: 23.5rem;
+                padding: 2rem;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+
+                .description__review {
+                    font-size: .625rem;
+                    line-height: 1.2rem;
+                    color: var(--txt-gray);
+                    font-weight: 500;
+                    margin-bottom: 1rem;
+                    padding-left: 1rem;
+                    border-left: 2px solid var(--green);
+                }
+
+                .review__info {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .review__author {
+                        display: flex;
+                        column-gap: .75rem;
+                        align-items: center;
+
+                        .author__img {
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                        }
+
+                        .author__name {
+                            font-size: .65rem;
+                            font-weight: 600;
+                            color: var(--txt-black);
+                        }
+                    }
+
+                    .punctuation {
+                        text-align: end;
+                        display: flex;
+                        flex-direction: column;
+
+                        .stars {
+                            font-size: .75rem;
+                            color: #f2bb37;
+                        }
+
+                        span {
+                            font-size: .65rem;
+                            font-weight: 600;
+                            color: var(--txt-black);
+                        }
+                    }
+                }
+            }
+        }
+
+        .about__txt {
+            padding-left: 4rem;
+            margin: auto 0;
+
+            .about__title {
+                color: var(--txt-black);
+                font-weight: 600;
+                line-height: 2rem;
+                margin-bottom: 1.25rem;
+
+                span {
+                    color: var(--green);
+                }
+            }
+
+            .about__description {
+                font-size: .75rem;
+                line-height: 1.35rem;
+                color: var(--txt-gray);
+                max-width: 28rem;
+                margin-bottom: 1rem;
+            }
+
+            .about__firma {
+                display: block;
+                height: 30px;
+            }
+
+            .about__author {
+                font-size: .685rem;
+                font-weight: 600;
+                color: var(--txt-black);
+            }
+
+            .btn-primary {
+                display: block;
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}

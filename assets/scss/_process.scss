@@ -1,0 +1,149 @@
+.process {
+    padding: 4rem 0 5rem;
+
+    .process__content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 480px;
+
+        .process__img {
+            position: relative;
+            margin-right: 3rem;
+
+            .img__process {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            } 
+
+            .process__icons {
+                position: absolute;
+                bottom: 0; left: 0;
+                width: 100%;
+                height: 9.5rem;
+                background-color: var(--white);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 3.5rem;
+                box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 400px;
+                    height: 2px;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    bottom: 4.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+
+                .icons__item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: .5rem;
+
+                    &:last-child {
+                        .icon__main {
+                            color: var(--yellow);
+                        }
+                        .circle-icon {
+                            color: var(--yellow);
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .icon__main {
+                        font-size: 1.65rem;
+                        color: var(--txt-gray);
+                    }
+
+                    .circle-icon {
+                        position: relative;
+                        font-size: 1.65rem;
+                        color: var(--txt-gray);
+                        border: 2px solid var(--white);
+                        background-color: var(--white);
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            width: 8px;
+                            height: 8px;
+                            top: 50%;
+                            right: 50%;
+                            transform: translate(50%, -50%);
+                            border-radius: 50%;
+                            background-color: var(--white);
+                        }
+                    }
+
+                    .icons__name {
+                        color: var(--txt-gray);
+                        font-size: .75rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .process__data {
+            padding-left: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .process__title {
+                color: var(--txt-black);
+                font-weight: 600;
+                line-height: 2rem;
+                margin-bottom: 2.5rem;
+
+                span {
+                    color: var(--green);
+                }
+            }
+
+            .process__item {
+                max-width: 26rem;
+                padding-left: 3.25rem;
+                margin-bottom: 2.25rem;
+                position: relative;
+
+                .process__number {
+                    position: absolute;
+                    top: 0; left: 0;
+                    background-color: var(--white);
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    color: var(--green);
+                    font-weight: 600;
+                    font-size: 1.1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 3px 3px 10px rgba(0, 0, 0, .1);
+                }
+
+                .process__name {
+                    color: var(--txt-black);
+                    font-weight: 600;
+                    margin-bottom: .75rem;
+                    line-height: 1rem;
+                }
+
+                .process__description {
+                    font-size: .75rem;
+                    line-height: 1.35rem;
+                    color: var(--txt-gray);
+                }
+            }
+        }
+    }
+}

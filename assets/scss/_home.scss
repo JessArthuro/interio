@@ -1,0 +1,230 @@
+.home {
+    height: 37rem;
+    width: 100%;
+    background: linear-gradient(to right, var(--green) 0%, var(--green) 72%, var(--cream) 72%, var(--cream) 100%);
+
+    .home__content {
+        padding: 4rem 3.5rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .txt__content {
+            max-width: 28rem;
+
+            .home__title {
+                font-size: 2.2rem;
+                line-height: 2.8rem;
+                color: var(--white);
+                font-weight: 600;
+                margin-bottom: 1rem;
+
+                span {
+                    color: var(--yellow);
+                    margin-right: .25rem;
+                }
+            }
+
+            .home__description {
+                font-size: .85rem;
+                color: var(--bg-body);
+                font-weight: 300;
+                margin-bottom: 1.5rem;
+            }
+
+            .btn-primary {
+                font-size: .8rem;
+                padding: .75rem 3rem .75rem 1rem;
+
+                .btn-icon {
+                    padding: .55rem .45rem;
+                }
+            }
+        }
+
+        .img__content {
+            height: 400px;
+            width: 600px;
+            margin-top: 2.5rem;
+            margin-right: 1.35rem;
+            position: relative;
+            z-index: 1000;
+
+            .home__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -1.35rem;
+                right: -1.35rem;
+                width: 120px;
+                height: 120px;
+                background-color: var(--blue);
+                z-index: -1;
+            }
+        }
+
+        .thumbnails {
+            position: absolute;
+            bottom: 0;
+            left: 3.5rem;
+            width: 350px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: -4.85rem;
+                bottom: 1.15rem;
+                width: 65px;
+                height: 3px;
+                background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 50%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, .5) 100%);
+            }
+
+            .thumb__item {
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                position: relative;
+                transition: .3s linear;
+
+                &.active {
+                    height: 85px;
+                    margin-bottom: 15px;
+                    border-bottom: 4px solid var(--yellow);
+
+                    &::after {
+                        color: var(--white);
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        margin-bottom: -6px;
+                    }
+                }
+
+                &:first-child {
+                    &::after {
+                        right: -20.65rem;
+                    }
+                }
+
+                &:last-child {
+                    &::after {
+                        right: -9rem;
+                    }
+                }
+
+                &::before {
+                    content: attr(data-text);
+                    position: absolute;
+                    top: .35rem;
+                    left: .35rem;
+                    font-size: .75rem;
+                    font-weight: 600;
+                    color: var(--white);
+                    z-index: 10;
+                    pointer-events: none;
+                }
+
+                &::after {
+                    content: attr(data-number);
+                    position: absolute;
+                    bottom: .85rem;
+                    right: -14.9rem;
+                    font-size: .8rem;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, .5);
+                    pointer-events: none;
+                }
+
+                .thumb__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: brightness(0.85);
+                }
+            }
+        }
+
+        .video-content {
+            position: absolute;
+            width: 600px;
+            height: 400px;
+            bottom: 4.75rem;
+            right: 4.85rem;
+            z-index: 1000;
+
+            .btn-video {
+                position: absolute;
+                bottom: -3rem;
+                right: -1.35rem;
+                background-color: var(--yellow);
+                font-size: 1.85rem;
+                padding: 1.2rem 1.3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+                cursor: pointer;
+
+                i {
+                    background-color: var(--white);
+                    color: var(--yellow);
+                    padding: .35rem;
+                    border-radius: 50%;
+                }
+
+                &::before {
+                    content: 'Ver Video';
+                    position: absolute;
+                    right: 100%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 110px;
+                    height: 55px;
+                    background-color: var(--white);
+                    color: var(--txt-black);
+                    font-size: .85rem;
+                    font-weight: 600;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    pointer-events: none;
+                    transition: .4s linear;
+                }
+            }
+
+            video.active~.btn-video::before {
+                content: 'Reproduciendo';
+                width: 150px;
+            }
+
+            video.paused~.btn-video::before {
+                content: 'Pausado';
+                width: 110px;
+            }
+
+            video {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+}

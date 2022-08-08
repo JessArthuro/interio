@@ -1,0 +1,106 @@
+.subscribe {
+    padding: 5rem 0 2rem;
+
+    .subscribe__content {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        height: 450px;
+
+        .img__subscribe {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .data__subscribe {
+            background: var(--green);
+            margin-top: 3.5rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0; 
+                width: 100%;
+                height: 100%;
+                background-image: url(../img/map.jpeg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                opacity: .05;
+            }
+
+            .txt__subscribe {
+                color: var(--white);
+                max-width: 350px;
+                z-index: 100;
+                position: relative;
+
+                .indicator__map {
+                    background-color: var(--yellow);
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -2rem; left: -5.25rem;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: rgba(221, 177, 64, .2);
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        top: 50%; left: 50%;
+                        transform: translate(-50%, -50%);
+                        background-color: rgba(221, 177, 64, .08);
+                    }
+                }
+
+                .data__direction {
+                    font-size: .75rem;
+                }
+
+                .data__title {
+                    margin: .5rem 0 1.5rem;
+                    line-height: 2rem;
+                    font-weight: 600;
+                }
+
+                .form__subscribe {
+                    display: flex;
+                    column-gap: .85rem;
+
+                    .input__email {
+                        padding: .75rem;
+                        font-size: .75rem;
+                        width: 100%;
+                        color: var(--txt-black);
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .btn-primary {
+                        padding: .65rem 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
